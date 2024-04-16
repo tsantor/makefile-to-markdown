@@ -66,6 +66,12 @@ ruff_clean: ## Run ruff clean
 python3 -m pip install makefile-to-markdown
 ```
 
+## Usage
+
+```bash
+makefile-to-markdown --path="Makefile"
+```
+
 ## Development
 
 ```bash
