@@ -69,7 +69,7 @@ python3 -m pip install makefile-to-markdown
 ## Usage
 
 ```bash
-makefile-to-markdown --path="Makefile"
+makefile-to-markdown convert --path "Makefile"
 ```
 
 ## Development
