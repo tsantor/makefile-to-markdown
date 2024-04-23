@@ -37,12 +37,14 @@ def extract_command(line: str) -> tuple:
     return None, None
 
 
-def makefile_2_markdown(input_makefile: Path, output=None):
+def makefile_2_markdown(input_makefile: Path, output=None) -> Path:
     """Given a Makefile, create a Markdown file of its commands with their descriptions."""
     makefile_contents = read_lines(input_makefile)
 
     if not output:
         output = Path(input_makefile).parent / "Makefile-commands.md"
+    else:
+        output = Path(output)
 
     headers = extract_headers(input_makefile)
 
@@ -73,3 +75,4 @@ def makefile_2_markdown(input_makefile: Path, output=None):
             markdown_content += f"| `{command}` | {description_escaped} |\n"
 
     save_content(output, markdown_content)
+    return output

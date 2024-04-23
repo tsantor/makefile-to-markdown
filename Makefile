@@ -41,7 +41,7 @@ env_remove:  ## Remove virtual environment
 
 env_from_scratch: env_remove env pip_install pip_install_editable  ## Create environment from scratch
 
-rehash:	## Rehash pyenv
+pyenv_rehash:	## Rehash pyenv
 	pyenv rehash
 
 # -----------------------------------------------------------------------------

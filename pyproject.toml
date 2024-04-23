@@ -18,7 +18,9 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
 ]
-dependencies = []
+dependencies = [
+  "click",
+]
 
 dynamic = ["version", "readme"]
 requires-python = ">=3.8"
@@ -34,7 +36,7 @@ Issues = "https://github.com/tsantor/makefile-to-markdown/issues"
 Changelog = "https://github.com/tsantor/makefile-to-markdown/blob/master/HISTORY.md"
 
 [project.scripts]
-makefile-to-markdown = "makefile_to_markdown.cli:run"
+makefile-to-markdown = "makefile_to_markdown.cli:cli"
 
 [project.optional-dependencies]
 dev = []
