@@ -71,7 +71,7 @@ def makefile_2_markdown(input_makefile: Path, output=None) -> Path:
         command, description = extract_command(line)
         if command and description and table_started:
             # Escaping pipe characters in descriptions to prevent breaking table formatting
-            description_escaped = description.replace("|", "\|")
+            description_escaped = description.replace("|", r"\|")
             markdown_content += f"| `{command}` | {description_escaped} |\n"
 
     save_content(output, markdown_content)

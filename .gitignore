@@ -21,3 +21,6 @@ htmlcov/
 .ruff_cache/
 node_modules/
 Makefile-commands.md
+
+# Project Specific
+.venv
